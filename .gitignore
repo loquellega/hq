@@ -1,0 +1,6 @@
+# Datos privados que crea hq en el servidor: contraseña (hash), sesiones, accesos y caché
+datos/*.php
+!datos/index.php
+datos/*.tmp
+.DS_Store
+*.zip

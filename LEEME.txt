@@ -1,0 +1,158 @@
+hq v1.7.0 · página de inicio personal
+Alchemy of Meaning (Alquimia del Significado)
+© 2026 Héctor Cruz Juárez · GPL-3.0-or-later
+
+INSTALAR
+1. Sube la carpeta completa a tu hosting, por ejemplo:
+   hectorcruz.com.mx/hq/   (necesita PHP 7.4 o más, el mismo que usa WordPress)
+2. Abre esa dirección. La primera vez te pide CREAR la contraseña.
+   Hazlo en cuanto la subas: quien entre primero la define.
+3. Brave la recuerda 400 días (cookie). En otro dispositivo la escribes una vez.
+   Si cambias la contraseña desde el menú «···», se cierran las demás sesiones.
+
+PÁGINA DE INICIO EN BRAVE
+- Configuración › Al iniciar › Abrir una página específica › tu URL.
+- Configuración › Apariencia › Mostrar botón de inicio › tu URL.
+- iPhone/Android: abre la URL › Compartir › Agregar a pantalla de inicio.
+
+VENTANA DE IMÁGENES (el bloque junto al reloj)
+- No usa fotos tuyas ni espacio en tu servidor: pide imágenes a servicios abiertos.
+- El botón de arriba a la derecha cambia la fuente: al azar · NASA foto del día ·
+  NASA espacio · pintura de Chicago · pintura de Cleveland. Clic en la imagen: otra.
+- La pintura se busca según el cielo: lluvia → tormentas, niebla → bruma,
+  noche → nocturnos, atardecer → crepúsculos, nieve → invierno.
+- NASA foto del día usa DEMO_KEY (50 consultas al día). Se pide una vez al día.
+  Si quieres más margen, saca una clave gratis en https://api.nasa.gov y ponla en
+  app.php, en CONFIG › nasaKey.
+
+QUÉ SE GUARDA Y DÓNDE
+- datos/acceso.php  → contraseña cifrada (hash) y la llave de las sesiones.
+- datos/estado.php  → accesos, filas, modos y relojes (se sincroniza entre dispositivos).
+- La ubicación se guarda solo en cada navegador.
+- Los archivos de datos empiezan con un «exit» de PHP: no se pueden leer por la web.
+- Olvidaste la contraseña: borra datos/acceso.php por FTP y vuelve a crearla
+  (tus accesos se conservan).
+
+AGREGAR ACCESOS (tres formas rápidas)
+- Arrastrar: con hq visible (otra ventana o vista dividida de Brave), arrastra el
+  ícono que está a la izquierda de la dirección —o cualquier enlace— y suéltalo
+  sobre la fila donde lo quieres. Abajo aparece «soltar aquí · fila nueva».
+- Pegar: copia una dirección y pégala en cualquier parte de hq (⌘V / Ctrl+V).
+- Botón «+ hq»: menú «···» › Botón «+ hq» para la barra de favoritos. Arrástralo a
+  la barra; en cualquier sitio, un clic lo manda a hq y la pestaña se cierra al guardar.
+En los tres casos hq lee el título y el ícono real del sitio (incluidos tus
+artefactos). Eliges fila e ícono con un toque y guardas con Enter.
+
+ACTUALIZAR DESDE UNA VERSIÓN ANTERIOR
+- Sube y reemplaza app.php, api.php, index.php y lib.php. No borres datos/:
+  ahí están tu contraseña y tus accesos.
+
+TABLERO (escritorio)
+- En una pantalla horizontal (laptop, 1080p, 4K) todo se acomoda en columnas y se
+  ve de un vistazo, sin desplazarse. La escala se ajusta sola a la pantalla; si la
+  quieres más grande o más chica: «···» › Tamaño en esta pantalla (se guarda por equipo).
+- Arrastra ⠿ para mover un bloque a otra columna. Al arrastrar aparece a la
+  derecha «suelta aquí · columna nueva».
+- En teléfono o ventana angosta se ve en una sola columna, con su propio orden.
+- Cada modo recuerda su tablero y su orden de teléfono.
+
+MÓDULOS DE ENLACES
+- «+ módulo» crea un módulo vacío (Producción, Docencia, Herramientas…) como
+  columna nueva. En «editar»: + agrega sitio, ✎ renombra, × quita el módulo.
+
+SONIDO (música procedural)
+- Botón «♪ sonido» en la barra de arriba, el bloque Sonido o la tecla M.
+- Tres modos:
+  · Enfoque  — para concentrarte: kalimba suave, pads de aire, bordón, ruido café,
+               cuencos lejanos de vez en cuando.
+  · Cáustika — atmósfera ritual: bordones, campanas, arpa, tambor grave, gongs y
+               cuencos a lo lejos.
+  · Endeles  — bosque: viento, lluvia, aves de día, campanas de viento y bambú
+               que se mueven con el viento real, oleaje si hay mar cerca.
+- Los timbres no son de sintetizador: cuerdas por modelo físico (kalimba, arpa),
+  campanas de viento con los parciales reales de un tubo metálico, golpes de bambú
+  hueco, cuencos con su batido y soplo de aire afinado a la armonía.
+- Espacio: controla la reverberación (de cuarto seco a bosque o nave grande).
+- El mood se toma en vivo del cielo y del clima: de día suena en lidio, al
+  atardecer en mixolidio, de noche en eólico; con nubes o lluvia, en dórico.
+  La temperatura fija la tónica, el viento el tempo y la capa de viento; la lluvia
+  y la tormenta suman lluvia y truenos; la luna, campanas nocturnas; el aire
+  contaminado, una ligera bruma; la marea, oleaje.
+- Dados ⚄ (o tecla D): otra armonía con el mismo clima. Cambia la tónica, pasa a
+  una escala vecina, elige otra progresión y mueve un poco el tempo; el acorde
+  nuevo entra en el siguiente pulso. Se recuerda hasta que pulses «cielo», que
+  vuelve a la armonía que dicta el clima.
+- Sonoridades: «+ guardar» conserva el modo, los dados y el espacio con un nombre
+  («Escritura», «Ensayo»…). Un clic la recupera (y la enciende); pasa el cursor
+  para ver la × y borrarla. Se sincronizan con tus otros dispositivos.
+- Radio (cuarto modo): estaciones en vivo. Vienen NPR 24 horas, WNYC, KQED, WBEZ,
+  KNKX, Jazz24, Radio UNAM, Opus 94.5 y SomaFM Drone Zone. El buscador consulta
+  Radio Browser, un directorio abierto con decenas de miles de radios del mundo:
+  ▶ para escuchar, + para guardarla en tus estaciones (se sincronizan). Pasa el
+  cursor sobre una estación para ver la × y quitarla.
+  Solo aparecen transmisiones seguras (https), que son las que el navegador deja
+  sonar en una página https. Una estación también se puede guardar como sonoridad.
+- Sesión: ∞, 25′ o 50′. Al terminar suenan tres campanas y se apaga sola.
+- Solo suena una pestaña a la vez: si lo enciendes en otra, la anterior se calla.
+- Se genera en tu navegador: no descarga audio ni gasta datos.
+- Con el teléfono bloqueado: hq deja programados unos 40 segundos de música (con
+  voces más simples) en el reloj de audio, que sigue corriendo aunque el sistema pause la
+  página; mientras la página siga viva, renueva esa reserva. En el teléfono el
+  sonido sale por el reproductor del sistema (controles en la pantalla de bloqueo).
+  En Android debería seguir sin cortes; en iPhone depende de iOS, que restringe el
+  audio de páginas web. Si una sesión con temporizador termina con la pantalla
+  bloqueada, las tres campanas y el fundido final suenan igual.
+
+NOTICIAS Y TRÁFICO
+- Pestañas: Mundo (Euronews en español), México (Google News, con La Jornada de
+  respaldo) y tu ciudad (Google News del día, según tu ubicación).
+- «+» en las pestañas agrega cualquier RSS (hay sugerencias). Tu servidor descarga
+  los titulares y los guarda 10 minutos.
+- Tráfico: mapa en vivo de Waze. Se abre con un clic para no gastar datos en cada
+  pestaña nueva; marca «abrir siempre» si lo quieres de entrada.
+
+USO
+- Modos (arriba): Completo, Enfoque, Calma… cada uno con su orden y filas ocultas.
+  Teclas 1–9 para cambiar. «···» › Guardar el orden actual como modo nuevo.
+- ⠿ a la izquierda de cada fila: arrástrala a donde quieras (también encima del reloj).
+- «editar» (o tecla E): ocultar filas, renombrar filas, arrastrar accesos, quitar relojes.
+- Ícono propio de un acceso: un emoji o la URL de una imagen.
+- Atajos: / buscar · N nuevo acceso · E editar.
+
+DATOS DEL FONDO
+- Open-Meteo (clima, aire y mar), CC BY 4.0 · calidad del aire: Copernicus CAMS.
+- Imágenes: NASA, Art Institute of Chicago (dominio público), Cleveland Museum of Art (CC0).
+- La marea solo aparece si estás a menos de 30 km del mar.
+- El sol, la luna y el año se calculan en la página, sin servicios externos.
+
+VERSIONES
+La versión que tienes subida se ve en el pie de hq, en el menú «···» y en la
+pantalla de contraseña. Cada .php la lleva en su primera línea de comentario.
+Al actualizar, sube SIEMPRE los cuatro .php juntos (app, api, index, lib).
+
+v1.7.0 · 2026-11-09 · estilo Alchemy of Meaning UI v1 (ventanas con barra de título,
+         verde solo para lo vivo, Inter, radio 3 px, contraste alto opcional, «h»
+         oculta la interfaz). Arreglo del sonido que se rompía: al ocultarse la
+         página ya no se programan cientos de voces de golpe, las voces viejas se
+         detienen de verdad y el audio usa un búfer de salida más grande.
+v1.6.1 · 2026-11-02 · sonido con la pantalla bloqueada: salida por el reproductor del
+         sistema en el teléfono y música programada por adelantado al ocultarse.
+v1.6.0 · 2026-10-25 · radio en internet: estaciones de NPR y otras, buscador de
+         Radio Browser, estaciones guardadas y sincronizadas.
+v1.5.0 · 2026-10-24 · timbres acústicos (kalimba y arpa por modelo físico, pads de
+         aire, campanas de viento, bambú, cuencos y gongs a lo lejos), reverb
+         natural más grande con control «espacio», sonoridades guardadas.
+v1.4.1 · 2026-10-24 · dados para cambiar la armonía (botón ⚄ o tecla D) y botón «cielo».
+v1.4.0 · 2026-10-24 · sonido: música procedural con modos Enfoque, Cáustika y
+         Endeles, mood según el cielo y el clima, temporizador de sesión.
+v1.3.1 · 2026-10-23 · arreglo: el mapa de tráfico se veía sin ancho. Noticias más
+         resistentes: las direcciones viajan cifradas en base64 (evita el filtro
+         de seguridad del hosting), respaldo si faltan extensiones de PHP, motivo
+         visible cuando una fuente falla y «···» › Diagnóstico de noticias.
+v1.3.0 · 2026-10-23 · tablero horizontal sin scroll (1080p a 4K, escala automática),
+         columnas arrastrables, módulos de enlaces, noticias (Euronews, México,
+         tu ciudad, RSS propios), tráfico en vivo de Waze.
+v1.2.0 · 2026-10-22 · agregar sitios arrastrando, pegando o con el botón «+ hq»;
+         título e ícono automáticos.
+v1.1.0 · 2026-10-22 · nombre hq; ventana de imágenes (NASA, museos) en lugar de fotos.
+v1.0.0 · 2026-10-22 · primera versión con contraseña, modos, fondo según clima.
